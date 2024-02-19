@@ -22,7 +22,6 @@ function closeOnEscape(e) {
 }
 
 function openOnKeydown(e) {
-  alert('test test ha')
   const focused = document.activeElement;
   const isNavDrop = focused.className === 'nav-drop';
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
@@ -120,6 +119,8 @@ export default async function decorate(block) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
+        alert('test test ha');
+        
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
