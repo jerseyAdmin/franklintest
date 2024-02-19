@@ -22,6 +22,7 @@ function closeOnEscape(e) {
 }
 
 function openOnKeydown(e) {
+  alert('test test ha')
   const focused = document.activeElement;
   const isNavDrop = focused.className === 'nav-drop';
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
